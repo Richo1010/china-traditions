@@ -108,12 +108,17 @@ function showWish(key, wish) {
   const greeting = name ? `${name}, ${WISHES[key].intro.toLowerCase()}` : WISHES[key].intro;
   currentWish = { greeting, ...wish };
 
+  /* Текст выводится через textContent: имя адресата вводит пользователь,
+     поэтому HTML-разметка в нём не должна выполняться */
   const card = document.getElementById("wishCard");
-  card.innerHTML = `
-    <div class="w-cn">${wish.cn}</div>
-    <div class="w-py">${wish.py}</div>
-    <div class="w-ru">«${wish.ru}»</div>
-    <div class="w-text">${greeting} ${wish.text}</div>`;
+  card.innerHTML = "";
+  [["w-cn", wish.cn], ["w-py", wish.py], ["w-ru", `«${wish.ru}»`], ["w-text", `${greeting} ${wish.text}`]]
+    .forEach(([cls, text]) => {
+      const div = document.createElement("div");
+      div.className = cls;
+      div.textContent = text;
+      card.appendChild(div);
+    });
 
   const box = document.getElementById("wishResult");
   box.classList.remove("show");

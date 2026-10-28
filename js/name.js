@@ -362,7 +362,7 @@ const HISSING = "жшчщц";
 
 /* Разбивает имя на слоги и подбирает иероглифы */
 function transcribe(word) {
-  const w = word.toLowerCase().replace(/ё/g, "ё").replace(/[ьъ]/g, "");
+  const w = word.toLowerCase().replace(/[ьъ]/g, "");
   if (KNOWN_NAMES[w]) return KNOWN_NAMES[w];
 
   const result = [];
@@ -377,7 +377,8 @@ function transcribe(word) {
       continue;
     }
     if (c === "й") {
-      /* «й» после гласной в конце слова обычно не передаётся */
+      /* «й» после гласной не передаётся (Андрей, Николай),
+         передаётся только в начале слова или после согласной */
       if (i === 0 || !VOWELS.includes(w[i - 1])) push("й");
       continue;
     }

@@ -94,6 +94,12 @@ function initCountdown() {
     seconds: box.querySelector("[data-seconds]")
   };
 
+  /* В сам день праздника вместо нулей выводим надпись */
+  if (daysUntil(date) === 0) {
+    box.querySelector(".countdown-timer").innerHTML = `<div class="countdown-today">Праздник сегодня!</div>`;
+    return;
+  }
+
   function tick() {
     let diff = Math.max(0, date - new Date());
     const days = Math.floor(diff / 86400000);
