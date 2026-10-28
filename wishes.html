@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Генератор пожеланий — Традиции и праздники Китая</title>
+  <meta name="description" content="Генератор пожеланий на китайском языке с пиньинем и переводом.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@400;600&family=PT+Serif:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="index.html">
+        <span class="logo-seal">福</span>
+        <span class="logo-text">Традиции и праздники Китая<small>中国传统节日</small></span>
+      </a>
+      <button class="nav-toggle" aria-label="Открыть меню" aria-expanded="false">☰</button>
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="holidays.html">Календарь праздников</a></li>
+          <li><a href="traditions.html">Традиции</a></li>
+          <li><a href="symbols.html">Символы и зодиак</a></li>
+          <li><a href="cuisine.html">Кухня</a></li>
+          <li><a href="art.html">Искусство</a></li>
+          <li><a href="wishes.html" class="active">Пожелания</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <span class="hero-glyph" aria-hidden="true">喜</span>
+      <div class="container">
+        <span class="eyebrow">吉祥话</span>
+        <h1>Генератор пожеланий</h1>
+        <div class="divider"><span>◆</span></div>
+        <p class="lead">В Китае любят короткие пожелания из четырёх иероглифов — чэнъюи. Их пишут на открытках, произносят за праздничным столом и вешают над дверью. Выберите повод, и генератор подберёт традиционное пожелание с переводом и чтением.</p>
+      </div>
+    </section>
+
+    <section style="padding-top:0">
+      <div class="container">
+        <div class="frame">
+          <form id="wishForm" class="form-row">
+            <div class="field">
+              <label for="occasion">Повод</label>
+              <select id="occasion"></select>
+            </div>
+            <div class="field">
+              <label for="recipient">Кому (необязательно)</label>
+              <input type="text" id="recipient" placeholder="Например, Мама" maxlength="30">
+            </div>
+            <button class="btn" type="submit">Создать пожелание</button>
+          </form>
+
+          <div class="result" id="wishResult" aria-live="polite">
+            <div class="wish-card" id="wishCard"></div>
+            <div class="wish-actions">
+              <button class="btn btn-outline" id="againBtn" type="button">Другое пожелание</button>
+              <button class="btn" id="copyBtn" type="button">Скопировать текст</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-title reveal">
+          <h2>Все пожелания для этого повода</h2>
+          <div class="divider"><span>◆</span></div>
+          <p>Нажмите на любое, чтобы открыть его как открытку.</p>
+        </div>
+        <div class="symbols" id="allWishes"></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="frame reveal">
+          <h3>Как читать пиньинь</h3>
+          <p>Пиньинь — официальная запись китайских слов латинскими буквами. Значки над гласными показывают тон: в китайском языке их четыре, и от тона зависит смысл слова. Например, <span class="cn">妈</span> <i>mā</i> — «мама», а <span class="cn">马</span> <i>mǎ</i> — «лошадь».</p>
+          <ul style="margin:0">
+            <li><b>ā</b> — первый тон, ровный и высокий;</li>
+            <li><b>á</b> — второй тон, восходящий, как вопрос «да?»;</li>
+            <li><b>ǎ</b> — третий тон, сначала вниз, потом вверх;</li>
+            <li><b>à</b> — четвёртый тон, резкий и падающий, как приказ.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Традиции и праздники Китая</h4>
+          <p>Познавательный сайт о праздниках, обычаях, символах, кухне и искусстве Китая. Создан как дипломная работа.</p>
+        </div>
+        <div>
+          <h4>Разделы</h4>
+          <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="holidays.html">Календарь праздников</a></li>
+            <li><a href="traditions.html">Традиции</a></li>
+            <li><a href="symbols.html">Символы и зодиак</a></li>
+            <li><a href="cuisine.html">Кухня</a></li>
+            <li><a href="art.html">Искусство</a></li>
+            <li><a href="wishes.html">Пожелания</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Мудрость</h4>
+          <p><span class="cn">千里之行，始于足下</span><br>«Путь в тысячу ли начинается с первого шага». — Лао-цзы</p>
+        </div>
+      </div>
+      <div class="copyright">© <span id="year">2026</span> «Традиции и праздники Китая». Дипломная работа.</div>
+    </div>
+  </footer>
+
+  <button class="to-top" aria-label="Наверх" title="Наверх">上</button>
+
+  <script src="js/holidays-data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/wishes.js"></script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

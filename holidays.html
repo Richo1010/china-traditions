@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Календарь праздников — Традиции и праздники Китая</title>
+  <meta name="description" content="Интерактивный календарь десяти главных традиционных праздников Китая.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@400;600&family=PT+Serif:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="index.html">
+        <span class="logo-seal">福</span>
+        <span class="logo-text">Традиции и праздники Китая<small>中国传统节日</small></span>
+      </a>
+      <button class="nav-toggle" aria-label="Открыть меню" aria-expanded="false">☰</button>
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="holidays.html" class="active">Календарь праздников</a></li>
+          <li><a href="traditions.html">Традиции</a></li>
+          <li><a href="symbols.html">Символы и зодиак</a></li>
+          <li><a href="cuisine.html">Кухня</a></li>
+          <li><a href="art.html">Искусство</a></li>
+          <li><a href="wishes.html">Пожелания</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <span class="hero-glyph" aria-hidden="true">节</span>
+      <div class="container">
+        <span class="eyebrow">节日日历</span>
+        <h1>Календарь праздников</h1>
+        <div class="divider"><span>◆</span></div>
+        <p class="lead">Традиционные праздники Китая отмечают по лунно-солнечному календарю, поэтому каждый год они выпадают на разные даты. Выберите год и нажмите на праздник, чтобы узнать его историю, обычаи и праздничные блюда.</p>
+      </div>
+    </section>
+
+    <section style="padding-top:0">
+      <div class="container">
+        <div class="toolbar" id="yearBar" aria-label="Выбор года"></div>
+        <div class="toolbar" id="seasonBar" aria-label="Фильтр по сезону">
+          <button class="chip active" data-season="all">Все сезоны</button>
+          <button class="chip" data-season="winter">Зима</button>
+          <button class="chip" data-season="spring">Весна</button>
+          <button class="chip" data-season="summer">Лето</button>
+          <button class="chip" data-season="autumn">Осень</button>
+        </div>
+
+        <div class="calendar" id="calendar"></div>
+
+        <div class="frame holiday-detail" id="detail" tabindex="-1"></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="frame reveal">
+          <h3>Как устроен китайский календарь</h3>
+          <p>Традиционный китайский календарь — лунно-солнечный. Месяц начинается в новолуние и длится 29 или 30 дней, поэтому 15-й день каждого месяца приходится на полнолуние. Чтобы календарь не отставал от времён года, примерно раз в три года добавляют тринадцатый, «високосный» месяц.</p>
+          <p style="margin:0">Год делится ещё и на 24 солнечных сезона (节气), которые описывают изменения природы: «Начало весны», «Пробуждение насекомых», «Чистый свет» и другие. По солнечным сезонам отмечают Цинмин и Дунчжи, поэтому их даты почти не меняются. В 2016 году система 24 сезонов внесена в список нематериального культурного наследия ЮНЕСКО.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Традиции и праздники Китая</h4>
+          <p>Познавательный сайт о праздниках, обычаях, символах, кухне и искусстве Китая. Создан как дипломная работа.</p>
+        </div>
+        <div>
+          <h4>Разделы</h4>
+          <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="holidays.html">Календарь праздников</a></li>
+            <li><a href="traditions.html">Традиции</a></li>
+            <li><a href="symbols.html">Символы и зодиак</a></li>
+            <li><a href="cuisine.html">Кухня</a></li>
+            <li><a href="art.html">Искусство</a></li>
+            <li><a href="wishes.html">Пожелания</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Мудрость</h4>
+          <p><span class="cn">千里之行，始于足下</span><br>«Путь в тысячу ли начинается с первого шага». — Лао-цзы</p>
+        </div>
+      </div>
+      <div class="copyright">© <span id="year">2026</span> «Традиции и праздники Китая». Дипломная работа.</div>
+    </div>
+  </footer>
+
+  <button class="to-top" aria-label="Наверх" title="Наверх">上</button>
+
+  <script src="js/holidays-data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/holidays.js"></script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

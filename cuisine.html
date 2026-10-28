@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Кухня — Традиции и праздники Китая</title>
+  <meta name="description" content="Праздничная кухня Китая с рецептами.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@400;600&family=PT+Serif:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="index.html">
+        <span class="logo-seal">福</span>
+        <span class="logo-text">Традиции и праздники Китая<small>中国传统节日</small></span>
+      </a>
+      <button class="nav-toggle" aria-label="Открыть меню" aria-expanded="false">☰</button>
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="holidays.html">Календарь праздников</a></li>
+          <li><a href="traditions.html">Традиции</a></li>
+          <li><a href="symbols.html">Символы и зодиак</a></li>
+          <li><a href="cuisine.html" class="active">Кухня</a></li>
+          <li><a href="art.html">Искусство</a></li>
+          <li><a href="wishes.html">Пожелания</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <span class="hero-glyph" aria-hidden="true">食</span>
+      <div class="container">
+        <span class="eyebrow">节日美食</span>
+        <h1>Праздничная кухня</h1>
+        <div class="divider"><span>◆</span></div>
+        <p class="lead">«Для народа пища — это небо», — говорит китайская пословица. У каждого праздника есть своё блюдо, а у каждого блюда — своё пожелание: богатства, долголетия или семейного единства.</p>
+      </div>
+    </section>
+
+    <section style="padding-top:0">
+      <div class="container">
+        <div class="toolbar" id="dishFilter" aria-label="Фильтр по празднику"></div>
+        <div class="cards" id="dishes"></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-title reveal">
+          <span class="eyebrow">八大菜系</span>
+          <h2>Восемь великих кухонь Китая</h2>
+          <div class="divider"><span>◆</span></div>
+        </div>
+        <div class="frame reveal">
+          <p>Китай настолько велик, что у каждой провинции свои вкусы. На севере едят больше пшеницы — лапшу и пельмени, на юге — рис. Принято выделять восемь главных региональных кухонь:</p>
+          <ul>
+            <li><b>Сычуаньская</b> <span class="cn">川菜</span> — острая и пряная, с сычуаньским перцем, от которого немеет язык.</li>
+            <li><b>Кантонская</b> <span class="cn">粤菜</span> — мягкий вкус, свежие продукты, знаменитые димсамы.</li>
+            <li><b>Шаньдунская</b> <span class="cn">鲁菜</span> — старейшая, основа императорской кухни, много морепродуктов.</li>
+            <li><b>Цзянсуская</b> <span class="cn">苏菜</span> — сладковатая, изысканная подача.</li>
+            <li><b>Чжэцзянская</b> <span class="cn">浙菜</span> — нежная, со свежей рыбой и бамбуком.</li>
+            <li><b>Хунаньская</b> <span class="cn">湘菜</span> — острая и копчёная.</li>
+            <li><b>Фуцзяньская</b> <span class="cn">闽菜</span> — супы и бульоны, морские продукты.</li>
+            <li><b>Аньхойская</b> <span class="cn">徽菜</span> — дикие травы и грибы, тушение.</li>
+          </ul>
+          <p class="note" style="margin:0">Китайцы едят палочками, а блюда подают уже нарезанными на кусочки. Нож за столом считается неуместным: он напоминает об оружии.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="modal" id="recipeModal" role="dialog" aria-modal="true" aria-label="Рецепт">
+      <div class="modal-box frame">
+        <button class="modal-close" aria-label="Закрыть">×</button>
+        <div class="modal-content"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Традиции и праздники Китая</h4>
+          <p>Познавательный сайт о праздниках, обычаях, символах, кухне и искусстве Китая. Создан как дипломная работа.</p>
+        </div>
+        <div>
+          <h4>Разделы</h4>
+          <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="holidays.html">Календарь праздников</a></li>
+            <li><a href="traditions.html">Традиции</a></li>
+            <li><a href="symbols.html">Символы и зодиак</a></li>
+            <li><a href="cuisine.html">Кухня</a></li>
+            <li><a href="art.html">Искусство</a></li>
+            <li><a href="wishes.html">Пожелания</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Мудрость</h4>
+          <p><span class="cn">千里之行，始于足下</span><br>«Путь в тысячу ли начинается с первого шага». — Лао-цзы</p>
+        </div>
+      </div>
+      <div class="copyright">© <span id="year">2026</span> «Традиции и праздники Китая». Дипломная работа.</div>
+    </div>
+  </footer>
+
+  <button class="to-top" aria-label="Наверх" title="Наверх">上</button>
+
+  <script src="js/holidays-data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/cuisine.js"></script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
