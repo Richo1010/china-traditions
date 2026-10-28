@@ -15,6 +15,7 @@
   --ink-soft: #5a4636;
   --jade: #3f6b5a;
 
+  --font-display: "Cormorant SC", "Playfair Display", Georgia, serif;
   --font-head: "Playfair Display", "PT Serif", Georgia, serif;
   --font-body: "PT Serif", Georgia, serif;
   --font-brush: "Ma Shan Zheng", "Noto Serif SC", serif;
@@ -961,3 +962,22 @@ button.symbol:hover { transform: translateY(-4px); }
 @media (max-width: 900px) { .cards-3 { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 560px) { .cards-3 { grid-template-columns: 1fr; } }
 .modal-box.frame { background: var(--parchment-light); }
+
+/* Шрифт шапки и главных заголовков: Cormorant SC, заглавные буквы */
+.logo-text,
+.nav a,
+h1,
+h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.logo-text { font-size: 1.1rem; }
+.logo-text small { font-weight: 400; text-transform: none; }
+.nav a {
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  text-align: center;
+}
