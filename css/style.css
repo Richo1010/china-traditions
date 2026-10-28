@@ -981,3 +981,17 @@ h2 {
   letter-spacing: 0.1em;
   text-align: center;
 }
+
+/* Квадратные иллюстрации (1:1) для разделов и статей */
+.cards-3 .card .photo,
+.article .photo { aspect-ratio: 1 / 1; }
+.dish .photo { aspect-ratio: 4 / 3; }
+@media (max-width: 480px) {
+  h1, h2 { letter-spacing: 0.03em; overflow-wrap: break-word; hyphens: auto; }
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+}
+/* Девять блюд — сетка 3 × 3 */
+#dishes { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 900px) { #dishes { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { #dishes { grid-template-columns: 1fr; } }
