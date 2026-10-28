@@ -9,8 +9,21 @@ document.addEventListener("DOMContentLoaded", () => {
   initToTop();
   initReveal();
   initPhotos();
+  initHeroVideo();
   initCountdown();
 });
+
+/* Видео на главной: если файла нет, остаётся картинка */
+function initHeroVideo() {
+  const video = document.querySelector(".hero-video");
+  if (!video) return;
+  const source = video.querySelector("source");
+  if (video.networkState === HTMLMediaElement.NETWORK_NO_SOURCE) {
+    video.remove();
+    return;
+  }
+  source.addEventListener("error", () => video.remove());
+}
 
 /* Мобильное меню */
 function initMenu() {

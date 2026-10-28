@@ -961,3 +961,13 @@ button.symbol:hover { transform: translateY(-4px); }
 @media (max-width: 900px) { .cards-3 { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 560px) { .cards-3 { grid-template-columns: 1fr; } }
 .modal-box.frame { background: var(--parchment-light); }
+
+/* Видео на главном экране (поверх фото, под затемнением) */
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media (prefers-reduced-motion: reduce) { .hero-video { display: none; } }
